@@ -16,13 +16,13 @@ const Span= styled.span`
  color: grey;
  font-size: 1.6rem;
 `
-export default function MoviesDescription() {
+export default function MoviesDescription(props) {
   return (
     <div>
-      <H1>Stranger Things</H1>
-        <div><Span>2016</Span><Span>|</Span><Span>U/A 16+</Span><Span>|</Span><Span>4 seasons</Span><Span>|</Span><Span>Sci-Fi</Span></div>
+      <H1>{props.Title}</H1>
+        <div><Span>{props.ReleasedDate}</Span><Span>|</Span><Span>U/A 16+</Span><Span>|</Span><Span>4 seasons</Span><Span>|</Span><Span>Sci-Fi</Span></div>
         <div style={{width:"50%"}}>
-            <P style={{marginBottom:"4rem"}}>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</P>
+            <P style={{marginBottom:"4rem"}}>{props.overview}</P>
             <P><Span style={{color:"grey"}}>Starring: </Span>Winona Ryder,David Harbour,Millie Bobby Brown</P>
             <P><Span style={{color:"grey"}}>Creater: </Span>The Duffer Brothers</P>
         </div>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+
 export const Navbar=styled.nav`
     display: flex;
     align-items: center;
@@ -22,4 +22,8 @@ export const Input=styled.input`
     height: 3.5rem;
     background-color: #a7adb45b;
     border-radius: 1.3rem;
+    border: 0px;
+    color:white;
+    font-size: 2rem;
+    padding: 1rem;
 `

@@ -8,16 +8,80 @@
 html{
   font-size: 62.5%;
   background-color: black;
+  
 }
+
+::-webkit-scrollbar{
+  width:1rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+  
+  border-radius: 1rem;
+  border: 2rem solid rgb(198, 52, 52);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  border-color: white;
+  
+}
+
 
 a{
   text-decoration: none;
+  
 }
 
 .Link{
   text-decoration: none;
-  color:white
+  color:#818181;
+ 
+  &:hover{
+    transform:scale(1.2);
+    color: White;
+  }
 }
+
+.activeLink{
+  transform:scale(1.2);
+  color: White;
+  text-decoration: overline 2px solid rgb(198, 52, 52);
+}
+
+.SideLink{
+  padding: .8rem .8rem .8rem 3.2rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  &:hover{
+    transition: 0.1s;
+    color: #f1f1f1;
+  }
+}
+
+.activeSideLink{
+  padding: .8rem .8rem .8rem 3.2rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgb(198, 52, 52);
+}
+
 /* body{
   background-color: #191C52;
   text-align: center;

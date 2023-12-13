@@ -17,7 +17,6 @@ const List= styled.div`
     border: 1px solid white;
      ;
 `
-
 const Section=styled.section`
  margin-top:3rem ;
  display: flex;
@@ -27,8 +26,8 @@ const Section=styled.section`
  /* background-image: linear-gradient(to top, black 65% ,rgba(0, 0, 0, 0.312) ); */
 `
 
-export default function MoviePage() {
-  const [Movies, setMovies]= React.useState([])
+export default function TVShows() {
+  const [Shows, setShows]= React.useState([])
 
   const options = {
     method: 'GET',
@@ -38,27 +37,29 @@ export default function MoviePage() {
     }
   };
   React.useEffect(()=>{
-    fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
+    fetch('https://api.themoviedb.org/3/trending/tv/day?language=en-US', options)
     .then(response => response.json())
-    .then(response => setMovies(response))
+    .then(response => setShows(response))
     .catch(err => console.error(err));
 
   },[])
  
 
   const list=[];
-  if(Movies && Movies.results){
-       for(let i=0; i<Movies.results.length; i++){
-         list.push(<Link to={`/Home/${Movies.results[i].original_title}`}><div style={{textAlign:"center", width:"15rem"}}> <List>
-           <Img src={`https://image.tmdb.org/t/p/original${Movies.results[i].poster_path}`} alt='indiana-jones-img' />
-         </List><span style={{ fontSize:"1.4rem", fontWeight:"500", color:"white"}}>{Movies.results[i].original_title}</span></div></Link>)
+  if(Shows && Shows.results){
+       for(let i=0; i<Shows.results.length; i++){
+         list.push(<Link to={`/Home/${Shows.results[i].original_name}`}><div style={{textAlign:"center", width:"15rem"}}> <List>
+           <Img src={`https://image.tmdb.org/t/p/original${Shows.results[i].poster_path}`} alt='indiana-jones-img' />
+         </List><span style={{ fontSize:"1.4rem", fontWeight:"500", color:"white"}}>{Shows.results[i].original_name}</span></div></Link>)
      }
   }
 
   console.log(list)
   return (
+    
     <Section>
       {list}
     </Section>
+    
   )
 }
