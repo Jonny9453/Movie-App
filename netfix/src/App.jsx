@@ -1,15 +1,15 @@
 import ProfilePage from './Pages/ProfilePage';
 
-import MediaHome from './Pages/MediaHome.js';
+import MediaHome from './Pages/MediaHome.jsx';
 import {BrowserRouter,Routes, Route} from 'react-router-dom';
-import MoviePage from './Pages/MoviePage.js';
-import TVShows from './Pages/TVShows.js'
+import MoviePage from './Pages/MoviePage.jsx';
+import TVShows from './Pages/TVShows.jsx'
 import Layout from './components/Header/Layout';
-import DescriptionPage from './Pages/DescriptionPage.js';
-import CategoriesPage from './Pages/Categories/CategoriesPage.js';
-import HindiMoviesandShows from './Pages/Categories/HindiMoviesandShows.js';
-import TopRated from './Pages/Categories/TopRated.js';
-import Popular from './Pages/Categories/Popular.js'
+import DescriptionPage from './Pages/DescriptionPage.jsx';
+import CategoriesPage from './Pages/Categories/CategoriesPage.jsx';
+import HindiMoviesandShows from './Pages/Categories/HindiMoviesandShows.jsx';
+import TopRated from './Pages/Categories/TopRated.jsx';
+import Popular from './Pages/Categories/Popular.jsx'
 
 function App() {
   
