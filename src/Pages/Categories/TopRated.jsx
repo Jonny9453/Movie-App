@@ -23,7 +23,7 @@ margin-top:3rem ;
 display: flex;
 gap:2rem;
 flex-wrap: ${(props)=>props.varient==='wrap'? 'wrap':'nowrap'};
-
+justify-content: center;
 
 
 `

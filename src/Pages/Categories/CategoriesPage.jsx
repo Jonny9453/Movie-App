@@ -56,7 +56,7 @@ export default function CategoriesPage() {
       <Navigation>
 
         <NavLink to="." end style={({isActive})=>isActive? activeStyles: nonactivestyles} ><Box >TopRated</Box></NavLink>
-        <NavLink to="Hindi" end style={({isActive})=>isActive? activeStyles: nonactivestyles}><Box>Hindi</Box></NavLink>
+        <NavLink to="popular" end style={({isActive})=>isActive? activeStyles: nonactivestyles}><Box>Popular</Box></NavLink>
       </Navigation>
       <Outlet  />
     </>

@@ -21,12 +21,14 @@ const Section=styled.section`
  margin-top:3rem ;
  display: flex;
  gap:2rem;
+ flex-wrap: ${(props)=>props.varient==='wrap'? 'wrap':'nowrap'};
+ justify-content: center;
  
  
  /* background-image: linear-gradient(to top, black 65% ,rgba(0, 0, 0, 0.312) ); */
 `
 
-export default function MovieList() {
+export default function Popular(props) {
 
     const [Movies, setMovies]=React.useState([])
 
@@ -65,7 +67,7 @@ export default function MovieList() {
   return (
     <div>
       
-      <Section className='animation'>
+      <Section className={props.varient==='wrap'?null : "animation"} varient={props.varient}>
         {list}
       </Section>
     </div>

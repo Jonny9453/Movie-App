@@ -1,7 +1,7 @@
 import { Profile } from '../components/Profile';
 import Button from '../components/button/Button';
 import{Link} from 'react-router-dom'
-
+import './profile.css'
 
 // const anchorTo=()=>{
 //   const profile=document.getElementById('profile2');
@@ -20,8 +20,8 @@ export default function ProfilePage() {
   return (
     
     <main className="App">
-      <p>streami</p>
-      <h1 >Who's Watching</h1>
+      <p className='streami'>streami</p>
+      <h1 className='heading'>Who's Watching</h1>
       <section className='Profiles'>
        {ProfileArray}
       </section>

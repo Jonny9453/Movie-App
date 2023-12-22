@@ -7,7 +7,6 @@ import TVShows from './Pages/TVShows.jsx'
 import Layout from './components/Header/Layout';
 import DescriptionPage from './Pages/DescriptionPage.jsx';
 import CategoriesPage from './Pages/Categories/CategoriesPage.jsx';
-import HindiMoviesandShows from './Pages/Categories/HindiMoviesandShows.jsx';
 import TopRated from './Pages/Categories/TopRated.jsx';
 import Popular from './Pages/Categories/Popular.jsx'
 import ErrorPage from './Pages/ErrorPage.jsx';
@@ -36,7 +35,7 @@ function App() {
                 
                 
                 {/* this is relative path 'Hindi' to categories */}
-                <Route path='Hindi' element={<HindiMoviesandShows/>}/> 
+                <Route path='popular' element={<Popular varient="wrap"/>}/> 
               </Route>
               <Route path="*" element={<ErrorPage/>}/>
             </Route>

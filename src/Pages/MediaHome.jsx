@@ -123,11 +123,11 @@ loadMovies()
 
 
 if(loading){
-  return(<h1 style={{color:"white"}}>loading....</h1>)
+  return(<h1 style={{color:"white"}} aria-live='polite'>loading....</h1>)
 }
   
 if(error){
-  return(<h1 style={{color:"white"}}>error....</h1>)
+  return(<h1 style={{color:"white"}} aria-live='assertive'>error....</h1>)
 }
 
   return (
