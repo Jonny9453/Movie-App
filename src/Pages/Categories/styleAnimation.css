@@ -15,12 +15,16 @@
     }
 
     51%{
-      transform: translateX(100%);
+      transform: translateX(-110%);
       
     }
     52%{
-      transform: translateX(0%);
+      transform: translateX(110%);
       
+    }
+
+    60%{
+      transform: translate(0%);
     }
     100%{
       transform: translateX(-100%);
