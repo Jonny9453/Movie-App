@@ -16,6 +16,8 @@ const Span= styled.span`
  color: grey;
  font-size: 1.6rem;
 `
+
+
 export default function MoviesDescription(props) {
   return (
     <div>
