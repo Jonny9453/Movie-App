@@ -139,14 +139,18 @@ if(error){
         <MoviesDescription Title={"Stranger Things"}/>
         <PlaySection />
         <H2>Trending Movies & TV Shows</H2>
-        <input id="search" type='number'/>
-        <button onClick={()=>{
-          const search=document.getElementById("search").value;
-          // setSearchParams({type:search})
-          handleFilterChange("rating", search)
+        <div>
+        <label htmlFor="search"><span style={{color:'white', fontSize:"2rem"}}>Ratings:</span></label>
+          <input id="search" type='number' placeholder='Ratings'/>
+          <button onClick={()=>{
+            const search=document.getElementById("search").value;
+            // setSearchParams({type:search})
+            handleFilterChange("rating", search)
 
-        }}>Search</button>
-        <button onClick={()=>setSearchParams({})}>Clear</button>
+          }}>Search</button>
+          <button onClick={()=>setSearchParams({})}>Clear</button>
+        </div>
+         
         <Section>
           {list}
         </Section>
