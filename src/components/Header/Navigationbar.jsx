@@ -109,8 +109,8 @@ export default function Navigationbar() {
                 <SearchedBox id="searchedBox">
                       {
                         array.length === 0?
-                        (<span></span>):(array.map((arr)=>{
-                          return (<Link class="Link" to={`/home/${arr.original_title}` } onClick={closedropdown} ><div style={{borderTop:"1px transparent solid", borderBottom:"1px #818181 solid", padding:"1rem", display:"flex", alignItems:"center", gap:"2rem"}} ><img src={`https://image.tmdb.org/t/p/original${arr.poster_path}`} alt='img' style={{height:"10rem"}}/>{arr.original_title||arr.original_name||arr.message}</div></Link>)
+                        (<span></span>):(array.map((arr,index)=>{
+                          return (<Link key={index} class="Link" to={`/home/${arr.original_title}` } onClick={closedropdown} ><div style={{borderTop:"1px transparent solid", borderBottom:"1px #818181 solid", padding:"1rem", display:"flex", alignItems:"center", gap:"2rem"}} ><img src={`https://image.tmdb.org/t/p/original${arr.poster_path}`} alt='img' style={{height:"10rem"}}/>{arr.original_title||arr.original_name||arr.message}</div></Link>)
                         }))
                       }
                 </SearchedBox>
