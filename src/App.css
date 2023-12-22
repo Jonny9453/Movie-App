@@ -85,6 +85,37 @@ a{
   background-color: rgb(198, 52, 52);
 }
 
+.movieDescription{
+  padding-left:5rem;
+  display:flex;
+  gap:5rem;
+}
+
+@media (max-width: 850px){
+  .Link{
+    
+   display: none;
+  }
+  .activeLink{
+    display:none;
+  }
+}
+
+@media (max-width:480px){
+  html{
+    font-size: 50.5%;
+    
+    
+  }
+  .movieDescription{
+    flex-direction: column-reverse;
+  }
+
+  .desc{
+    width:100% !important;
+  }
+  
+}
 /* body{
   background-color: #191C52;
   text-align: center;

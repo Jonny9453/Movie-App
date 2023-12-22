@@ -6,7 +6,7 @@ import '../App.css'
 import strangerthings from '../img/strangerthings.jpg'
 
 import {Link, useSearchParams} from 'react-router-dom'
-
+import { getmovies } from '../api';
 
 
 
@@ -58,7 +58,8 @@ const Section=styled.section`
 export default function MediaHome() {
 
   const[searchParams, setSearchParams]=useSearchParams();
-
+  const[loading, setLoading]=React.useState(false)
+  const[error, setError]=React.useState(null)
   const filterType= searchParams.get("rating")
 
   
@@ -67,13 +68,7 @@ export default function MediaHome() {
   const [Movies, setMovies]=React.useState([])
   
 
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMWE1NTcwOTBhMzZjNTRlM2NhNzNlZjljMTNjY2ZkOSIsInN1YiI6IjY0NDEyODY5YjNmNmY1MDQ5YzlkNjBlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.rUjHWbQEg4GYMZfnoJgnJXWUKDU6oSg2OwHWaczQuGY'
-    }
-  };
+
   
   
 // const getMovies=async (url)=>{
@@ -86,14 +81,22 @@ export default function MediaHome() {
 
    React.useEffect(()=>{     
 //     getMovies(url);
-      fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
-        .then(response => response.json())
-        .then(response => {
-          const displayMovies= filterType? response.results.filter(movie=>movie.vote_average.toString()>=filterType):response.results
-          setMovies(displayMovies)
-        })
-        .catch(err => console.error(err));
-
+async function loadMovies(){
+  setLoading(true)
+  try{
+    const data= await getmovies();
+    const displayMovies= filterType? data.results.filter(movie=>movie.vote_average.toString()>=filterType):data.results
+    setMovies(displayMovies)
+  }
+   catch(err){
+      setError(err)
+  }
+  finally{
+    setLoading(false)
+    }
+   
+}
+loadMovies()
       console.log(Movies)
 },[searchParams]);
 
@@ -101,7 +104,7 @@ export default function MediaHome() {
     const list=[];
    if(Movies ){
         for(let i=0; i<Movies.length; i++){
-          list.push(<Link state={{search: `?${searchParams.toString()}`}} to={`/Home/${Movies[i].original_title||Movies[i].original_name}`} ><div style={{textAlign:"center", width:"15rem"}}> <List>
+          list.push(<Link state={{search: `?${searchParams.toString()}`,type:filterType}} to={`/Home/${Movies[i].original_title||Movies[i].original_name}`} ><div style={{textAlign:"center", width:"15rem"}}> <List>
             <Img src={`https://image.tmdb.org/t/p/original${Movies[i].poster_path}`} alt='indiana-jones-img' />
           </List><span style={{ fontSize:"1.4rem", fontWeight:"500", color:"white"}}>{Movies[i].original_title||Movies[i].original_name}</span></div></Link>)
       }
@@ -117,7 +120,15 @@ export default function MediaHome() {
         return prevParams
     })
 }
+
+
+if(loading){
+  return(<h1 style={{color:"white"}}>loading....</h1>)
+}
   
+if(error){
+  return(<h1 style={{color:"white"}}>error....</h1>)
+}
 
   return (
     <Body>
@@ -130,9 +141,9 @@ export default function MediaHome() {
         <H2>Trending Movies & TV Shows</H2>
         <input id="search" type='number'/>
         <button onClick={()=>{
-          // const search=document.getElementById("search").value;
+          const search=document.getElementById("search").value;
           // setSearchParams({type:search})
-          handleFilterChange("rating", 8)
+          handleFilterChange("rating", search)
 
         }}>Search</button>
         <button onClick={()=>setSearchParams({})}>Clear</button>

@@ -10,6 +10,7 @@ import CategoriesPage from './Pages/Categories/CategoriesPage.jsx';
 import HindiMoviesandShows from './Pages/Categories/HindiMoviesandShows.jsx';
 import TopRated from './Pages/Categories/TopRated.jsx';
 import Popular from './Pages/Categories/Popular.jsx'
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 function App() {
   
@@ -22,7 +23,7 @@ function App() {
               <Route path='/Home' element={<MediaHome/>}/>
               <Route path='/Movies' element={<MoviePage/>}/>
               <Route path='/TVShows' element={<TVShows/>}/>
-              <Route path='/Home/:id/' element={<DescriptionPage/>}>
+              <Route path='/Home/:id' element={<DescriptionPage/>}>
                 <Route index element={<TopRated varient="nowrap"/>}/>
                 <Route path='popular' element={<Popular varient="nowrap"/>}/>
               </Route>
@@ -37,6 +38,7 @@ function App() {
                 {/* this is relative path 'Hindi' to categories */}
                 <Route path='Hindi' element={<HindiMoviesandShows/>}/> 
               </Route>
+              <Route path="*" element={<ErrorPage/>}/>
             </Route>
           </Routes>
         </BrowserRouter>

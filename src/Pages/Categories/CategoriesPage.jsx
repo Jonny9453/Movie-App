@@ -45,6 +45,10 @@ export default function CategoriesPage() {
       display: flex;
       justify-content: center;
       gap:2rem;
+      @media (max-width:480px){
+        flex-direction: column;
+        align-items: center;
+      }
      
   `
   return (

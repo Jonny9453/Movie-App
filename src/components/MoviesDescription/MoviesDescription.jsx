@@ -21,7 +21,7 @@ export default function MoviesDescription(props) {
     <div>
       <H1>{props.Title}</H1>
         <div><Span>{props.ReleasedDate}</Span><Span>|</Span><Span>U/A 16+</Span><Span>|</Span><Span>4 seasons</Span><Span>|</Span><Span>Sci-Fi</Span></div>
-        <div style={{width:"50%"}}>
+        <div className="desc" style={{width:"50%"}}>
             <P style={{marginBottom:"4rem"}}>{props.overview}</P>
             <P><Span style={{color:"grey"}}>Starring: </Span>Winona Ryder,David Harbour,Millie Bobby Brown</P>
             <P><Span style={{color:"grey"}}>Creater: </Span>The Duffer Brothers</P>

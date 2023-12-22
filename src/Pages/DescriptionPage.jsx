@@ -3,7 +3,7 @@ import {useParams, Link, NavLink, Outlet,useLocation} from 'react-router-dom';
 import styled from 'styled-components'
 import PlaySection from '../components/PlaySection/PlaySection';
 import MoviesDescription from '../components/MoviesDescription/MoviesDescription';
-
+import '../App.css'
 
  
 
@@ -50,7 +50,7 @@ export default function DescriptionPage() {
     console.log(location)
     const [Movies, setMovies]=React.useState([])
     const Body= styled.div`
-   
+      
     
 `
     const Button=styled.a`
@@ -107,20 +107,20 @@ export default function DescriptionPage() {
 <Body >
     
     {/* <Navigationbar/> */}
-    <Link to={`..${search}`} relative="path" style={{padding:"5rem"}}><Button>Back to Movies</Button></Link>
+    <Link to={`..${search}`} relative="path" style={{padding:"5rem", }}><Button>{`Back to Movies ${search}`}</Button></Link>
       {Movies.length === 0 ?(
         <p style={{color:"white"}}>Loading...</p>
       ): Movies.results.length!==0?(
         
-        <main style={{paddingLeft:"5rem", display:"flex", gap:"5rem"}}>
-        <div>
+        <main className="movieDescription">
+        <div className="movieDescription1">
         <MoviesDescription  Title={Movies.results[0].original_title||Movies.results[0].original_name} overview={Movies.results[0].overview} ReleasedDate={Movies.results[0].release_date} Rating={Movies.results[0].vote_average}/>
         <PlaySection />
 
         
         
         </div>
-        <div style={{height:"50rem", marginRight:"5rem"}}>
+        <div className="movieDescription2" style={{height:"50rem", marginRight:"5rem", marginTop:"2rem"}}>
           <img style={{height:"100%"}} src={`https://image.tmdb.org/t/p/original${Movies.results[0].poster_path}`} alt={`-img`}/>
         </div>
         
