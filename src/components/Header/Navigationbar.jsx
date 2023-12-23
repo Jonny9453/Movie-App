@@ -104,8 +104,8 @@ export default function Navigationbar() {
             </Div>
             <Div>
               <div style={{position:"relative"}} >
-                <label htmlFor="searchMovie">Search</label>
-                <Input id='searchMovie' type="search" onClick={searchMovie} onChange={searchMovie} />
+                
+                <Input id='searchMovie' type="search" onClick={searchMovie} onChange={searchMovie} placeholder='search' />
                 <button onClick={searchMovie} style={{color:"white" ,backgroundColor:"transparent", border:"none", scale:"1.6", position:"absolute", top:"1rem", right:"1rem"}}><SearchIcon/></button>
                 <SearchedBox id="searchedBox">
                       {
