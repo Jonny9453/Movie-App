@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import './styleAnimation.css'
+import PropTypes from 'prop-types';
+
 
 const List= styled.div`
     width: 14.6rem;
@@ -27,7 +29,9 @@ const Section=styled.section`
  
  /* background-image: linear-gradient(to top, black 65% ,rgba(0, 0, 0, 0.312) ); */
 `
-
+Popular.propTypes = {
+  varient: PropTypes.string
+};
 export default function Popular(props) {
 
     const [Movies, setMovies]=React.useState([])

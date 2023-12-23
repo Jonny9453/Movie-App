@@ -2,7 +2,7 @@ import React from 'react'
 import {Link, useOutletContext} from 'react-router-dom'
 import styled from 'styled-components'
 import './styleAnimation.css'
-
+import  PropTypes  from 'prop-types'
 
 
 const List= styled.div`
@@ -29,6 +29,9 @@ justify-content: center;
 `
 
 
+TopRated.propTypes = {
+  varient: PropTypes.string
+};
 
 export default function TopRated(props) {
 
