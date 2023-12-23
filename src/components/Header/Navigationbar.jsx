@@ -118,7 +118,7 @@ export default function Navigationbar() {
               </div>
                 
                 <div style={{backgroundColor:'red', width:'3.6rem', height:'3.6rem', borderRadius:'50%'}}></div>
-                <Link to=''>Jenny</Link>
+                <Link style={{color:"white"}} to=''>Jenny</Link>
             </Div>    
         </Navbar>
         
