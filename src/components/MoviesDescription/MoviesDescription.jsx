@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import  PropTypes  from 'prop-types';
 const H1= styled.h1`
     font-size: 3.6rem;
     color:white;
@@ -16,7 +16,11 @@ const Span= styled.span`
  color: grey;
  font-size: 1.6rem;
 `
-
+MoviesDescription.propTypes = {
+  Title: PropTypes.string,
+  ReleasedDate:PropTypes.string,
+  overview:PropTypes.string
+};
 
 export default function MoviesDescription(props) {
   return (

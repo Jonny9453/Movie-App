@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {Link} from 'react-router-dom'
 const Footerr=styled.footer`
    margin: 5rem;
     
@@ -31,21 +31,21 @@ export default function Footer() {
             <p>Questions? Call 000-800-919-1694</p>
         </Contact>
         <FooterNavigation clssName="footer-Navigation">
-                <a>FAQ</a>
-                <a>Help Center</a>
-                <a>Account</a>
-                <a>Media Center</a>
-                <a>Invester Relation</a>
-                <a>Jobs</a>
-                <a>Ways to Watch</a>
-                <a>Terms of Use</a>
-                <a>Privacy</a>
-                <a>Cookie Preferences</a>
-                <a>Corporate Information</a>
-                <a>Contact Us</a>
-                <a>Speed test</a>
-                <a>Legal Notices</a>
-                <a>MetFlix</a>
+                <Link>FAQ</Link>
+                <Link>Help Center</Link>
+                <Link>Account</Link>
+                <Link>Media Center</Link>
+                <Link>Invester Relation</Link>
+                <Link>Jobs</Link>
+                <Link>Ways to Watch</Link>
+                <Link>Terms of Use</Link>
+                <Link>Privacy</Link>
+                <Link>Cookie Preferences</Link>
+                <Link>Corporate Information</Link>
+                <Link>Contact Us</Link>
+                <Link>Speed test</Link>
+                <Link>Legal Notices</Link>
+                <Link>MetFlix</Link>
         </FooterNavigation>
     </Footerr>
   )
