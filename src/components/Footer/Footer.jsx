@@ -31,21 +31,22 @@ export default function Footer() {
             <p>Questions? Call 000-800-919-1694</p>
         </Contact>
         <FooterNavigation clssName="footer-Navigation">
-                <Link>FAQ</Link>
-                <Link>Help Center</Link>
-                <Link>Account</Link>
-                <Link>Media Center</Link>
-                <Link>Invester Relation</Link>
-                <Link>Jobs</Link>
-                <Link>Ways to Watch</Link>
-                <Link>Terms of Use</Link>
-                <Link>Privacy</Link>
-                <Link>Cookie Preferences</Link>
-                <Link>Corporate Information</Link>
-                <Link>Contact Us</Link>
-                <Link>Speed test</Link>
-                <Link>Legal Notices</Link>
-                <Link>MetFlix</Link>
+                <Link className='footerLink'>FAQ</Link>
+                <Link className='footerLink'>Help Center</Link>
+                <Link className='footerLink'>Account</Link>
+                <Link className='footerLink'>Media Center</Link>
+                <Link className='footerLink'>Media Center</Link>
+                <Link className='footerLink'>Invester Relation</Link>
+                <Link className='footerLink'>Jobs</Link>
+                <Link className='footerLink'>Ways to Watch</Link>
+                <Link className='footerLink'>Terms of Use</Link>
+                <Link className='footerLink'>Privacy</Link>
+                <Link className='footerLink'>Cookie Preferences</Link>
+                <Link className='footerLink'>Corporate Information</Link>
+                <Link className='footerLink'>Contact Us</Link>
+                <Link className='footerLink'>Speed test</Link>
+                <Link className='footerLink'>Legal Notices</Link>
+                <Link className='footerLink'>MetFlix</Link>
         </FooterNavigation>
     </Footerr>
   )

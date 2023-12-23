@@ -95,6 +95,10 @@ a{
   gap:5rem;
 }
 
+
+.footerLink{
+  color:#4A4A4A;
+}
 @media (max-width: 850px){
   .Link{
     
