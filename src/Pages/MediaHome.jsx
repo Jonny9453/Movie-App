@@ -44,10 +44,33 @@ const Section=styled.section`
  gap:2rem;
  flex-wrap:wrap;
  justify-content: center;
+
+
  
  /* background-image: linear-gradient(to top, black 65% ,rgba(0, 0, 0, 0.312) ); */
 `
 
+
+const Input =styled.input`
+    width:10rem;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+`
+
+const Button=styled.button`
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+`
 // const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=931c0e4&s=Harry Potter';
 
 
@@ -146,15 +169,15 @@ if(error){
             <H2>Trending Movies & TV Shows</H2>
             <div style={{position:"relative", padding:"3rem"}}>
                 <div style={{position:"absolute", right:"5rem" }}>
-                <label htmlFor="search"><span style={{color:'white', fontSize:"2rem"}}>Ratings:</span></label>
-                  <input id="search" type='number' placeholder='Ratings'/>
-                  <button onClick={()=>{
+                <label htmlFor="search"><span style={{color:'white', fontSize:"2rem"}}>Filters:</span></label>
+                  <Input id="search" type='number' placeholder='Ratings'/>
+                  <Button onClick={()=>{
                     const search=document.getElementById("search").value;
                     // setSearchParams({type:search})
                     handleFilterChange("rating", search)
 
-                  }}>Search</button>
-                  <button onClick={()=>setSearchParams({})}>Clear</button>
+                  }}>Search</Button>
+                  <Button onClick={()=>setSearchParams({})}>Clear</Button>
                 </div>
             </div>
             
