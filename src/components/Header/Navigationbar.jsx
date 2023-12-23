@@ -104,13 +104,14 @@ export default function Navigationbar() {
             </Div>
             <Div>
               <div style={{position:"relative"}} >
+                <label htmlFor="searchMovie">Search</label>
                 <Input id='searchMovie' type="search" onClick={searchMovie} onChange={searchMovie} />
                 <button onClick={searchMovie} style={{color:"white" ,backgroundColor:"transparent", border:"none", scale:"1.6", position:"absolute", top:"1rem", right:"1rem"}}><SearchIcon/></button>
                 <SearchedBox id="searchedBox">
                       {
                         array.length === 0?
                         (<span></span>):(array.map((arr,index)=>{
-                          return (<Link key={index} class="Link" to={`/home/${arr.original_title}` } onClick={closedropdown} ><div style={{borderTop:"1px transparent solid", borderBottom:"1px #818181 solid", padding:"1rem", display:"flex", alignItems:"center", gap:"2rem"}} ><img src={`https://image.tmdb.org/t/p/original${arr.poster_path}`} alt='img' style={{height:"10rem"}}/>{arr.original_title||arr.original_name||arr.message}</div></Link>)
+                          return (<Link key={index} className="searchLink" to={`/home/${arr.original_title}` } onClick={closedropdown} ><div style={{borderTop:"1px transparent solid", borderBottom:"1px #818181 solid", padding:"1rem", display:"flex", alignItems:"center", gap:"2rem"}} ><img src={`https://image.tmdb.org/t/p/original${arr.poster_path}`} alt='img' style={{height:"10rem"}}/>{arr.original_title||arr.original_name||arr.message}</div></Link>)
                         }))
                       }
                 </SearchedBox>
