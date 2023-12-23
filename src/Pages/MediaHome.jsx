@@ -20,7 +20,7 @@ const H2= styled.h2`
     color:white;
     font-size: 2.4rem;
     font-weight: 500;
-
+    padding-left: 5rem;
     margin-top: 4rem;
 `
 
@@ -43,6 +43,7 @@ const Section=styled.section`
  display: flex;
  gap:2rem;
  flex-wrap:wrap;
+ justify-content: center;
  
  /* background-image: linear-gradient(to top, black 65% ,rgba(0, 0, 0, 0.312) ); */
 `
@@ -134,29 +135,35 @@ if(error){
     <Body>
     
       {/* <Navigationbar/> */}
-      <main style={{paddingLeft:"5rem"}}>
-        
-        <MoviesDescription Title={"Stranger Things"}/>
-        <PlaySection />
-        <H2>Trending Movies & TV Shows</H2>
-        <div style={{position:"relative", padding:"3rem"}}>
-            <div style={{position:"absolute", right:"5rem" }}>
-            <label htmlFor="search"><span style={{color:'white', fontSize:"2rem"}}>Ratings:</span></label>
-              <input id="search" type='number' placeholder='Ratings'/>
-              <button onClick={()=>{
-                const search=document.getElementById("search").value;
-                // setSearchParams({type:search})
-                handleFilterChange("rating", search)
-
-              }}>Search</button>
-              <button onClick={()=>setSearchParams({})}>Clear</button>
-            </div>
+      <main >
+        <div style={{paddingLeft:"5rem"}}>
+          <MoviesDescription Title={"Stranger Things"}/>
+          <PlaySection />
         </div>
         
-         
-        <Section>
-          {list}
-        </Section>
+        
+        <div>
+            <H2>Trending Movies & TV Shows</H2>
+            <div style={{position:"relative", padding:"3rem"}}>
+                <div style={{position:"absolute", right:"5rem" }}>
+                <label htmlFor="search"><span style={{color:'white', fontSize:"2rem"}}>Ratings:</span></label>
+                  <input id="search" type='number' placeholder='Ratings'/>
+                  <button onClick={()=>{
+                    const search=document.getElementById("search").value;
+                    // setSearchParams({type:search})
+                    handleFilterChange("rating", search)
+
+                  }}>Search</button>
+                  <button onClick={()=>setSearchParams({})}>Clear</button>
+                </div>
+            </div>
+            
+            
+            <Section>
+              {list}
+            </Section>
+        </div>
+        
         
       </main>
 
