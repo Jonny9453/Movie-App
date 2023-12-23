@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import girl from '../img/girl.jpg'
-import boy from '../img/boy.jpg'
-import girl2 from '../img/girl2.jpg'
-import profile from '../img/profile.jpg'
+import girl from '../img/girl.webp'
+import boy from '../img/boy.webp'
+import girl2 from '../img/girl2.webp'
+import profile from '../img/profile.webp'
 
 export const Profile=styled.div`
     width: 20.5rem;
