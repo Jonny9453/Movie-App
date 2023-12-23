@@ -11,21 +11,18 @@ const List= styled.div`
    border-radius:1.6rem ;
    overflow: hidden;
    border: 1px solid white;
-    
 `
 
-const Img=styled.img` 
+const Img=styled.img`
    width: 100%;
    object-fit: cover;
 `
 const Section=styled.section`
-margin-top:3rem ;
-display: flex;
-gap:2rem;
-flex-wrap: ${(props)=>props.varient==='wrap'? 'wrap':'nowrap'};
-justify-content: center;
-
-
+  margin-top:3rem ;
+  display: flex;
+  gap:2rem;
+  flex-wrap: ${(props)=>props.varient==='wrap'? 'wrap':'nowrap'};
+  justify-content: center;
 `
 
 
