@@ -60,6 +60,7 @@ const Input =styled.input`
     border-radius: 1rem;
     margin-left: 2rem;
     margin-right: 1rem;
+    color: white;
 `
 
 const Button=styled.button`
