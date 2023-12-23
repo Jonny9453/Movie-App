@@ -8,6 +8,7 @@ const PlaySec=styled.section`
     display: flex;
     gap:3rem;
     align-items: center;
+    margin-bottom: 3rem;
 `
 
 export default function PlaySection() {
