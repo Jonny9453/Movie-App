@@ -11,10 +11,10 @@ import './profile.css'
 
 
 export default function ProfilePage() {
-
+  const names = ['Jenny', 'Mayank', 'kriti', 'Profile'];
     const ProfileArray=[]
         for(let i=0; i<4; i++){
-        ProfileArray.push(<Link  to='/Home'><Profile background={i} /></Link>)
+        ProfileArray.push(<Link  to='/Home'><Profile background={i} /><span style={{fontSize:"3rem", color:"white", fontWeight:"500"}}>{names[i]}</span></Link>)
     }
 
   return (

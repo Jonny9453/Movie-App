@@ -23,6 +23,7 @@
   
   .Profiles{
     display: flex;
+    gap:3rem;
     width: 100%;
     justify-content: space-evenly;
     position: absolute;
