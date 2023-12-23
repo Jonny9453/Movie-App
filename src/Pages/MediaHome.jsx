@@ -59,7 +59,7 @@ const Input =styled.input`
     border: 1px solid white;
     border-radius: 1rem;
     margin-left: 2rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 `
 
 const Button=styled.button`
@@ -168,7 +168,7 @@ if(error){
         <div>
             <H2>Trending Movies & TV Shows</H2>
             <div style={{position:"relative", padding:"3rem"}}>
-                <div style={{position:"absolute", right:"5rem" }}>
+                <div style={{position:"absolute", right:"6rem" }}>
                 <label htmlFor="search"><span style={{color:'white', fontSize:"2rem"}}>Filters:</span></label>
                   <Input id="search" type='number' placeholder='Ratings'/>
                   <Button onClick={()=>{

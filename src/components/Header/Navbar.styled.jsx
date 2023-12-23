@@ -15,6 +15,10 @@ export const  Div=styled.div`
     font-weight: 500;
     font-family: 'Inter', sans-serif;
     color: white;
+
+    @media(max-width:500px){
+        gap:2rem;
+    }
    
 `
 export const Input=styled.input`
@@ -26,4 +30,5 @@ export const Input=styled.input`
     color:white;
     font-size: 2rem;
     padding: 1rem;
+    margin-left:1rem;
 `
