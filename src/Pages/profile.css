@@ -30,3 +30,9 @@
    
     transform: translateY(-50%);
   }
+
+  @media (max-width:480px){
+    .Profiles{
+      flex-direction: column;
+    }
+  }
