@@ -6,6 +6,8 @@ import {Navbar, Div, Input} from './Navbar.styled';
 import {NavLink,Link} from 'react-router-dom';
 import SlideNav from '../SlideNavigation/slideNav';
 import styled from 'styled-components';
+import girl from '../../img/girl.webp'
+import { Profile } from '../Profile';
 
 const SearchedBox=styled.div`
   color:white;
@@ -117,7 +119,7 @@ export default function Navigationbar() {
                 </SearchedBox>
               </div>
                 
-                <div style={{backgroundColor:'red', width:'3.6rem', height:'3.6rem', borderRadius:'50%'}}></div>
+                <Profile style={{backgroundColor:'red', width:'3.6rem', height:'3.6rem', borderRadius:'50%', backgroundSize:"cover"}}></Profile>
                 <Link style={{color:"white"}} to=''>Jenny</Link>
             </Div>    
         </Navbar>
