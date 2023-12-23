@@ -14,7 +14,7 @@ export default function ProfilePage() {
 
     const ProfileArray=[]
         for(let i=0; i<4; i++){
-        ProfileArray.push(<Link  to='/Home'><Profile /></Link>)
+        ProfileArray.push(<Link  to='/Home'><Profile background={i} /></Link>)
     }
 
   return (
@@ -26,6 +26,7 @@ export default function ProfilePage() {
        {ProfileArray}
       </section>
       <Button/>
+     
       
     </main>
     
